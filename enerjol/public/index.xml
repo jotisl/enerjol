@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>(Side)notes on energy</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on (Side)notes on energy</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;I study and (aspire to) work on energy systems, which are most of our greenhouse gas problem.&lt;/p&gt;&#xA;&lt;p&gt;I just finished a master&amp;rsquo;s at McGill University modeling long-duration energy storage and energy carriers, in the &lt;a href=&#34;https://alternativefuelslaboratory.ca/&#34;&gt;Alternative Fuels Laboratory&lt;/a&gt;. Before that, I spent a few years going up and down the engineering R&amp;amp;D pipeline through student rocketry, internships, and research during my undergrad in mechanical engineering.&lt;/p&gt;&#xA;&lt;p&gt;I love parentheticals, but they clutter sentences. My antidote is to delete them elsewhere and tend to them here.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>On valuing long duration energy storage and energy carrier trade in net-zero energy systems</title>
+      <link>http://localhost:1313/mscthesis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/mscthesis/</guid>
+      <description>&lt;p&gt;I wrote a thesis under Prof. Jeffrey M. Bergthorson at McGill University on the electricity system costs we could avoid if we had long duration energy storage. With it, we wouldn&amp;rsquo;t need to build as much solar, wind, and batteries. If you&amp;rsquo;re reading this, you have an advance copy.&lt;/p&gt;&#xA;&lt;p&gt;Tangents, corrections, a deluxe edition, and bite-sized findings to come in the future!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
