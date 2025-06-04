@@ -1,4 +1,4 @@
-baseurl: "https://enerjol.com/"  # please update this to your actual URL
+baseurl: "https://jotisl.github.io/enerjol/"  # please update this to your actual URL
 languageCode: "en-us"
 title: "(Side)notes on energy"
 theme: "hugo-xmin"
