@@ -32,6 +32,10 @@ params:
   description: "A website built using Hugo-Xmin with sidenotes from Colophon"
   footer: "&copy; Julien Otis-Laperriere - {Year} | [LinkedIn](https://www.linkedin.com/in/julien-otis-laperriere/)"
 
+caches:
+  images:
+    dir: :cacheDir/images
+
 markup:
   highlight:
     codeFences: false
