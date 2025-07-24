@@ -1,0 +1,276 @@
+//================================================
+// 1. CONFIGURATION & LAYOUT VARIABLES
+//================================================
+$sidenote-width: 220px;
+$sidenote-offset: 15px;
+$container-width: 650px;
+
+$sidenote-shift: $sidenote-width+$sidenote-offset;
+
+// Breakpoint for when sidenotes no longer fit and collapse
+$mobile-breakpoint: $container-width + $sidenote-width + $sidenote-offset;
+$medium-breakpoint: $container-width + 2*$sidenote-width + $sidenote-offset;
+//================================================
+// 2. CORE PAGE LAYOUT
+//================================================
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  color:#252525;
+}
+
+// The .page-container is the master grid for the entire page
+.page-container {
+  display: grid;
+  // Defines 3 columns: [left-gutter] [main-content] [right-gutter]
+  grid-template-columns: 1fr $container-width 1fr;
+  // grid-column-gap: $sidenote-offset;
+
+  // On small screens, collapse to a single, simple column
+  @media screen and (max-width: $mobile-breakpoint) {
+    display: block; // Revert from grid to simple block layout
+    max-width: $container-width;
+    margin: auto;
+  }
+
+  @media screen and (min-width: $mobile-breakpoint) and (max-width:$medium-breakpoint){
+  grid-template-columns: 1fr $container-width $sidenote-width;
+  }
+  
+}
+
+// ★ FIX: Ensure header, main, and footer are ALL in the center column
+.site-header,
+.main-content,
+footer {
+  // Place these elements in the 2nd grid column (the center one)
+  grid-column: 2;
+
+  // On small screens, they naturally take up the full width
+  @media screen and (max-width: $mobile-breakpoint) {
+    grid-column: auto; // Unset the grid placement
+  }
+}
+
+// Add padding to the main content area specifically
+.main-content {
+  // padding: 1em;
+  position: relative; // Keeps sidenote anchors working correctly
+  overflow: visible;
+}
+
+//================================================
+// 3. SIDENOTE STYLING
+// (Works perfectly with the grid layout)
+//================================================
+:root {
+  --neon-pink: #ff6ec7;
+  --border-color: #b1e2ea;
+}
+
+.sidenote {
+  font-size: 85%;
+  position: relative; 
+  border: dashed 3px white;
+  color: rgb(77, 77, 77);
+}
+
+.sidenote-checkbox {
+  display: none;
+}
+
+/* Sidenote counter */
+body {
+  counter-reset: sidenote-counter;
+}
+
+.sidenote-number {
+  font-size: 100%;
+  position: relative;
+  
+  // Style the label (the clickable text in main body)
+  .sidenote-label {
+    text-decoration: underline dashed var(--border-color);
+    cursor: pointer;
+    white-space: nowrap; // Only prevent breaks in the label itself
+  }
+  
+  // Hide the superscript when checkbox is checked
+  .sidenote-checkbox:checked ~ sup {
+    display: none;
+  }
+  
+  // Hover effects for the entire sidenote
+  &:hover {
+    .sidenote-label {
+      text-decoration: none;
+      background-color: var(--border-color);
+    }
+    .sidenote {
+      border: dashed 3px var(--border-color);
+    }
+  }
+}
+
+.sidenote {
+  // Remove the old nested styling since we moved it to .sidenote-number
+}
+
+/* Wide viewport */
+@media (min-width: $mobile-breakpoint) {
+  .sidenote {
+      float: right;
+      clear: right;
+      margin-right: -$sidenote-shift;
+      text-align: left;
+      top: -0.4rem;
+      width: $sidenote-width;
+      margin-top: 0.4rem;
+  }
+}
+
+/* Narrow viewport */
+@media screen and (max-width: $mobile-breakpoint) {
+  .sidenote {
+    float: none;
+    clear: none;
+    width: 100%;
+    margin: 10px 0;
+    display: none;
+  }
+  
+  .sidenote-checkbox:checked ~ .sidenote {
+    display: block;
+  }
+}
+
+//================================================
+// 4. HEADER, FOOTER, AND ARTICLE STYLING
+// (Your original styles, unchanged)
+//================================================
+
+/* Header layout */
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: none;
+  border-bottom: 3px solid #ed1b2f;
+  margin: 0;
+  padding: 0 0em; // Add padding to align with main content
+  margin-bottom: 1em;
+}
+
+.site-title {
+  text-align: right;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0px;
+  padding: 0 0px;
+}
+
+/* General menu layout */
+.menu {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.article-meta .menu a, .menu a {
+  text-decoration: none;
+  background: #eee;
+  border-radius: 5px;
+}
+
+.site-header .menu a {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: inherit;
+  font-size: 1.1em;
+}
+
+/* Footer styles */
+footer {
+  padding: 0em;
+  margin-top: 1em;
+}
+
+/* Article & Misc Elements */
+main {
+  hyphens: auto;
+}
+
+.article-meta {
+  background: #eee;
+  padding: 0.4em;
+  margin: 0em 0;
+  border-radius: 5px;
+}
+
+.article-meta .title {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.article-meta .byline {
+  font-style: italic;
+  font-size: 0.95em;
+  color: #555;
+  margin: 0.2em 0 0 0;
+  line-height: 1.4;
+}
+
+img, iframe, video {
+  display:block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 5px solid #ccc;
+  padding: 3px 1em 3px;
+}
+
+pre {
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 5px #eee;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+code {
+  background: #f9f9f9;
+}
+
+pre code {
+  background: none;
+}
+
+table {
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+table thead th {
+  border-bottom: 1px solid #ddd;
+}
+
+th, td {
+  padding: 5px;
+}
+
+thead, tfoot, tr:nth-child(even) {
+  background: #eee;
+}

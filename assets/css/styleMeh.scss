@@ -1,0 +1,236 @@
+// Sidenote configuration
+$sidenote-width: 220px;
+$sidenote-offset: 5px; // Gap between content and sidenote
+$container-width: 650px;
+
+// Calculate the breakpoint for when we have room for content + right sidenote
+$right-sidenote-breakpoint: $container-width + $sidenote-width + $sidenote-offset + 10px; // 40px for some margin
+
+// Calculate the breakpoint for when we have room for content + sidenotes on both sides
+$both-sidenotes-breakpoint: $container-width + 2 * ($sidenote-width + $sidenote-offset) + 20px; // 80px for margins
+
+// Container for the entire page that shifts as one block
+.page-container {
+  max-width: $container-width;
+  margin: 0 auto;
+  position: relative;
+
+  // On medium-wide screens, shift the page left to make room for right sidenotes
+  @media screen and (min-width: $right-sidenote-breakpoint) and (max-width: ($both-sidenotes-breakpoint - 1px)) {
+    margin-left: calc(50% - #{($container-width + $sidenote-width + $sidenote-offset)/2});
+    margin-right: auto;
+  }
+
+  // On very wide screens, center the body again (room for sidenotes on both sides)
+  @media screen and (min-width: $both-sidenotes-breakpoint) {
+    margin: 0 auto;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  position: relative;
+}
+
+/* Header layout */
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 1em;
+  border: none;
+  border-bottom: 3px solid #ed1b2f;
+  margin: 0;
+  padding: 0 0em;
+}
+
+// Main content container - now just handles padding
+.main-content {
+  padding: 0em;
+  position: relative;
+}
+
+.site-title {
+  text-align: right;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0px;
+  padding: 0 10px;
+}
+
+/* General menu layout */
+.menu {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+/* Footer or default: keep inline menu buttons */
+.menu li {
+  display: inline-block;
+}
+
+/* Footer styles */
+footer {
+  padding: 1em;
+}
+
+.article-meta, .menu a {
+  text-decoration: none;
+  background: #eee;
+  border-radius: 5px;
+}
+
+/* Header-specific menu style override */
+.site-header .menu a {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: inherit;
+  font-size: 1.1em;
+}
+
+/* code */
+pre {
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 5px #eee;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+code {
+  background: #f9f9f9;
+}
+
+pre code {
+  background: none;
+}
+
+/* misc elements */
+img, iframe, video {
+  max-width: 100%;
+}
+
+main {
+  hyphens: auto;
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 5px solid #ccc;
+  padding: 3px 1em 3px;
+}
+
+table {
+  margin: auto;
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
+table thead th {
+  border-bottom: 1px solid #ddd;
+}
+
+th, td {
+  padding: 5px;
+}
+
+thead, tfoot, tr:nth-child(even) {
+  background: #eee;
+}
+
+/* article stuff */
+.article-meta {
+  background: #eee;
+  padding: 1em;
+  margin: 1.5em 0;
+  border-radius: 5px;
+}
+
+/* Tighten vertical spacing */
+.article-meta .title {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.article-meta .byline {
+  font-style: italic;
+  font-size: 0.95em;
+  color: #555;
+  margin: 0.2em 0 0 0;
+  line-height: 1.4;
+}
+
+/* Sidenotes */
+:root {
+  --neon-pink: #ff6ec7;
+  --border-color: #b1e2ea;
+}
+.sidenote {
+  &:hover {
+    background-color: var(--border-color);
+    .sidenote-label {
+      text-decoration: none;
+    }
+    .sidenote-content {
+      border: dashed 3px var(--border-color);
+    }
+  }
+  .sidenote-label {
+    text-decoration: underline dashed var(--border-color);
+  }
+}
+.sidenote-checkbox {
+  display: none;
+}
+.sidenote-content {
+  display: block;
+  position: absolute;
+  width: $sidenote-width;
+  // box-sizing: border-box;
+  margin-top: -2.4em;
+  border: 3px solid transparent;
+  padding: 0.25rem;
+  font-size: 0.75rem;
+  // transform: translateY(-2.4em); /* More precise than margin adjustments */
+  
+  /* Apply margin adjustment only when positioned absolutely (in margin) */
+  &.sidenote-margin-adjust {
+    margin-top: calc(-2.4em + var(--margin-offset, 0px));
+  }
+  
+  &.sidenote-right {
+    left: calc(100% + #{$sidenote-offset});
+  }
+  &.sidenote-left {
+    right: calc(100% + #{$sidenote-offset});
+  }
+  // Mobile/narrow screen behavior - use the correct breakpoint for right sidenotes
+  @media screen and (max-width: $right-sidenote-breakpoint) {
+    position: static;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    display: none;
+    transform: none; /* Reset transform for static positioning */
+    
+    /* Reset margin adjustment for static positioning */
+    &.sidenote-margin-adjust {
+      margin-top: 10px;
+    }
+    
+    .sidenote-checkbox:checked ~ & {
+      display: block;
+    }
+    &.sidenote-right,
+    &.sidenote-left {
+      left: auto;
+      right: auto;
+    }
+  }
+}

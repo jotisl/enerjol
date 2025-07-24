@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" />
     {{ partial "head_custom.html" . }}
+
   </head>
 
-  <body>
+<body>
+  <header class="site-header">
+    <div class="site-title">{{ .Site.Title }}</div>
     <nav>
-    <ul class="menu">
-      {{ range .Site.Menus.main }}
-      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-      {{ end }}
-    </ul>
-    <hr/>
+      <ul class="menu">
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
     </nav>
+    <hr/>
+  </header>

@@ -1,8 +1,19 @@
 {{ partial "header.html" . }}
 <div class="article-meta">
-<h1><span class="title">{{ .Title | markdownify }}</span></h1>
-{{ with .Params.author }}<h2 class="author">{{ . }}</h2>{{ end }}
-{{ if (gt .Params.date 0) }}<h2 class="date">{{ .Date.Format "2006/01/02" }}</h2>{{ end }}
+  <h1 class="title">{{ .Title | markdownify }}</h1>
+
+  <!-- {{ with .Params.author }}
+    <p class="byline">By {{ . }}</p>
+  {{ end }} -->
+
+    {{ if or .Params.date .Params.lastmod }}
+    <p class="byline">
+      {{ if .Params.date }}Published: {{ .Date.Format "2006/01/02" }}{{ end }}
+      {{ if and .Params.date .Params.lastmod }} &nbsp;&bull;&nbsp; {{ end }}
+      {{ with .Params.lastmod }}Last updated: {{ .Format "2006/01/02" }}{{ end }}
+    </p>
+  {{ end }}
+
 </div>
 
 <main>

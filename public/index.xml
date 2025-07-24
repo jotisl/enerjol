@@ -6,20 +6,21 @@
     <description>Recent content on (Side)notes on energy</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 24 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Five questions on the backburner</title>
+      <link>http://localhost:1313/post/2025/07/24/five-questions-on-the-backburner/</link>
+      <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2025/07/24/five-questions-on-the-backburner/</guid>
+      <description>&lt;p&gt;When you spend two and a half years trying to crossbreed engineering with policy in energy systems, you necessarily find yourself asking a lot of questions. These are some of the questions that have stuck with me over time, and that a quick google didn&amp;rsquo;t resolve. I&amp;rsquo;m working on some of them, or on posing them to more people. Collective intelligence!&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;How can we move from an environmentalism that opposes to one that proposes?&lt;/li&gt;&#xA;&lt;li&gt;What are the scaling laws of power systems?&lt;/li&gt;&#xA;&lt;li&gt;How will energy storage be distributed between garages, industrial yards, neighborhoods, substations, and generators?&lt;/li&gt;&#xA;&lt;li&gt;What will be the temporal and spatial extent of the world&amp;rsquo;s energysheds?&lt;/li&gt;&#xA;&lt;li&gt;How much matter are we processing to make today&amp;rsquo;s (energy) tech, and at what point are urban deposits better than natural ones?&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;1-towards-an-environmentalism-that-proposes&#34;&gt;1. Towards an environmentalism that proposes&lt;/h2&gt;&#xA;&lt;p&gt;Environmentalism of preservation has slowed fossil fuel growth and environmental damage. Taken to the extreme, it can backfire and prevent &lt;span class=&#34;sidenote-number&#34;&gt;&#xD;&#xA;  &lt;label class=&#34;sidenote-label&#34; for=&#34;sidenote-1&#34;&gt;generally good&amp;NoBreak;&lt;b&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/b&gt;&lt;/label&gt;&#xD;&#xA;  &lt;input class=&#34;sidenote-checkbox&#34; type=&#34;checkbox&#34; id=&#34;sidenote-1&#34;&gt;&lt;/input&gt;&#xD;&#xA;  &lt;small class=&#34;sidenote&#34;&gt;&#xD;&#xA;    &lt;b&gt;&lt;sup&gt;1&lt;/sup&gt;&lt;/b&gt; Context matters: sometimes preservation does avoid damage from &amp;ldquo;good&amp;rdquo; things. I&amp;rsquo;m not saying you should pour concrete for wind turbines over every frog-rich wetland, or &lt;a href=&#34;https://antar.org.au/issues/cultural-heritage/the-destruction-of-juukan-gorge/&#34;&gt;blow up 46,000-year-old rock shelters&lt;/a&gt; in the name of more iron ore mining. But you &lt;em&gt;should&lt;/em&gt; be able to build multi-story housing in semi-detached neighborhoods in a housing crisis, or &lt;a href=&#34;https://www-tagesschau-de.translate.goog/wirtschaft/energie/stromtrassen-genehmigungen-bundesnetzagentur-stromautobahnen-100.html?_x_tr_sl=fr&amp;amp;_x_tr_tl=en&amp;amp;_x_tr_hl=en-US&amp;amp;_x_tr_pto=wapp&#34;&gt;build transmission lines&lt;/a&gt; to bring wind power across your country and reduce gas dependence&amp;hellip;&#xD;&#xA;  &lt;/small&gt;&#xD;&#xA;&lt;/span&gt; things from getting built, too. This could be &lt;a href=&#34;https://www.nytimes.com/2025/06/30/us/california-environment-newsom-ceqa.html&#34;&gt;housing in California&lt;/a&gt; or battery plants on an old contaminated munitions site.&lt;/p&gt;</description>
+    </item>
     <item>
       <title></title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
       <description>&lt;p&gt;I study and (aspire to) work on energy systems, which are most of our greenhouse gas problem.&lt;/p&gt;&#xA;&lt;p&gt;I just finished a master&amp;rsquo;s at McGill University modeling long-duration energy storage and energy carriers, in the &lt;a href=&#34;https://alternativefuelslaboratory.ca/&#34;&gt;Alternative Fuels Laboratory&lt;/a&gt;. Before that, I spent a few years going up and down the engineering R&amp;amp;D pipeline through student rocketry, internships, and research during my undergrad in mechanical engineering.&lt;/p&gt;&#xA;&lt;p&gt;I love parentheticals, but they clutter sentences. My antidote is to delete them elsewhere and tend to them here.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>On valuing long duration energy storage and energy carrier trade in net-zero energy systems</title>
-      <link>http://localhost:1313/mscthesis/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/mscthesis/</guid>
-      <description>&lt;p&gt;I wrote a thesis under Prof. Jeffrey M. Bergthorson at McGill University on the electricity system costs we could avoid if we had long duration energy storage. With it, we wouldn&amp;rsquo;t need to build as much solar, wind, and batteries. If you&amp;rsquo;re reading this, you have an advance copy.&lt;/p&gt;&#xA;&lt;p&gt;Tangents, corrections, a deluxe edition, and bite-sized findings to come in the future!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

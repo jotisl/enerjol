@@ -5,21 +5,54 @@ body {
   line-height: 1.5;
 }
 
-/* header and footer areas */
-.menu { padding: 0; }
-.menu li { display: inline-block; }
+/* Header and footer layout */
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 1em;
+  border: none;
+  border-bottom: 3px solid #ed1b2f;
+  margin: 0;
+}
+
+.site-title {
+  text-align: right;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0px;
+  padding: 0 10px;
+}
+
+/* General menu layout */
+.menu {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+/* Footer or default: keep inline menu buttons */
+.menu li {
+  display: inline-block;
+}
+
+/* Footer and general menu link styles */
 .article-meta, .menu a {
   text-decoration: none;
   background: #eee;
-  padding: 5px;
+  /* padding: 5px; */
   border-radius: 5px;
 }
-.menu, .article-meta, footer { text-align: center; }
-.title { font-size: 1.1em; }
-footer a { text-decoration: none; }
-hr {
-  border-style: dashed;
-  color: #ddd;
+
+/* Header-specific menu style override */
+.site-header .menu a {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: inherit;
+  font-size: 1.1em; /* ~2-3pt increase from base */
 }
 
 /* code */
@@ -49,3 +82,26 @@ table {
 table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
 thead, tfoot, tr:nth-child(even) { background: #eee; }
+
+/* article stuff */
+.article-meta {
+  background: #eee;
+  padding: 1em;
+  margin: 1.5em 0;
+  border-radius: 5px;
+}
+
+/* Tighten vertical spacing */
+.article-meta .title {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin: 0; /* eliminate extra space */
+}
+
+.article-meta .byline {
+  font-style: italic;
+  font-size: 0.95em;
+  color: #555;
+  margin: 0.2em 0 0 0; /* small space above, none below */
+  line-height: 1.4;
+}

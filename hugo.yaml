@@ -1,7 +1,7 @@
 baseurl: "https://jotisl.github.io/"  # please update this to your actual URL
 languageCode: "en-us"
 title: "(Side)notes on energy"
-theme: "hugo-xmin"
+theme: "hugo-xmin" #"hugo-xmin"
 googleAnalytics: ""
 disqusShortname: ""
 ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
@@ -16,20 +16,22 @@ menu:
     - name: Home
       url: ""
       weight: 1
+    - name: MSc
+      url: "mscthesis/"
+      weight: 2
     - name: About
       url: "about/"
-      weight: 2
-    - name: Categories
-      url: "categories/"
-      weight: 3
-    - name: Tags
-      url: "tags/"
-      weight: 4
+    # - name: Categories
+    #   url: "categories/"
+    #   weight: 3
+    # - name: Tags
+    #   url: "tags/"
+    #   weight: 4
     # - name: Subscribe
     #   url: "index.xml"
 
 params:
-  description: "A website built using Hugo-Xmin with sidenotes from Colophon"
+  description: "A website built starting from Hugo-Xmin"
   footer: "&copy; Julien Otis-Laperriere - {Year} | [LinkedIn](https://www.linkedin.com/in/julien-otis-laperriere/)"
 
 caches:

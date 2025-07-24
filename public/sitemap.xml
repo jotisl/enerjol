@@ -3,13 +3,41 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2025-07-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>http://localhost:1313/categories/backburner/</loc>
+    <lastmod>2025-07-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/blogdown/</loc>
+    <lastmod>2025-07-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-07-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/mscthesis/</loc>
+    <loc>http://localhost:1313/post/2025/07/23/five-questions-on-the-backburner/</loc>
+    <lastmod>2025-07-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/markdown/</loc>
+    <lastmod>2025-07-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/mathjax/</loc>
+    <lastmod>2025-07-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/pandoc/</loc>
+    <lastmod>2025-07-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2025-07-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/rstudio/</loc>
+    <lastmod>2025-07-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-07-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/topics/</loc>
+    <lastmod>2025-07-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
   </url>
 </urlset>

@@ -1,0 +1,7 @@
+<span class="sidenote-number">
+  <label class="sidenote-label" for="sidenote-{{ add $.Ordinal 1 }}">{{ .Get 0 }}&NoBreak;<b><sup>{{ add $.Ordinal 1 }}</sup></b></label>
+  <input class="sidenote-checkbox" type="checkbox" id="sidenote-{{ add $.Ordinal 1 }}"></input>
+  <small class="sidenote">
+    <b><sup>{{ add $.Ordinal 1 }}</sup></b> {{ .Inner | markdownify }}
+  </small>
+</span>

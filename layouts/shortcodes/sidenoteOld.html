@@ -1,0 +1,94 @@
+{{/* layouts/shortcodes/sidenoteOld.html */}}
+{{/* Preserve your exact functionality but add numbering */}}
+{{- $label := .Get 0 -}}
+{{- $side := .Get 1 | default "right" -}}
+{{- $content := .Inner -}}
+
+{{/* Auto-increment sidenote counter for numbering */}}
+{{- $sidenoteNum := add 1 (.Page.Scratch.Get "sidenote_counter" | default 0) -}}
+{{- .Page.Scratch.Set "sidenote_counter" $sidenoteNum -}}
+
+{{/* Auto-increment position counter */}}
+{{- $currentPos := add 1 (.Page.Scratch.Get "sidenote_position" | default 0) -}}
+{{- .Page.Scratch.Set "sidenote_position" $currentPos -}}
+
+{{/* Estimate sidenote height based on content */}}
+{{- $contentLength := len (plainify $content) -}}
+{{- $avgCharsPerLine := 37 -}}{{/* Approximate chars per line in sidenote width */}}
+{{- $lineHeight := 1.4 -}}{{/* CSS line-height equivalent */}}
+{{- $basePadding := 1 -}}{{/* Base padding in em */}}
+{{- $estimatedLines := math.Ceil (div $contentLength $avgCharsPerLine) -}}
+{{- $estimatedHeight := add $basePadding (mul $estimatedLines $lineHeight) -}}
+
+{{/* Get existing sidenotes for this side with their heights */}}
+{{- $scratchKey := printf "sidenotes_%s" $side -}}
+{{- $scratchHeightKey := printf "heights_%s" $side -}}
+{{- $existingPositions := .Page.Scratch.Get $scratchKey | default slice -}}
+{{- $existingHeights := .Page.Scratch.Get $scratchHeightKey | default slice -}}
+{{- $finalPosition := $currentPos -}}
+
+{{/* Debug: Let's see what's happening with positions */}}
+{{- $debugMode := true -}}{{/* Set to true to see debug info */}}
+
+{{/* Simplified approach - just stack sidenotes with minimal spacing */}}
+{{- $minSeparation := 0.5 -}}
+{{- $finalPosition := $currentPos -}}
+
+{{/* If we have existing sidenotes on this side, find where to place this one */}}
+{{- if gt (len $existingPositions) 0 -}}
+  {{/* Find the highest bottom position of existing sidenotes */}}
+  {{- $highestBottom := 0 -}}
+  {{- range $index, $pos := $existingPositions -}}
+    {{- $height := index $existingHeights $index | default 2 -}}
+    {{- $bottom := add $pos $height -}}
+    {{- if gt $bottom $highestBottom -}}
+      {{- $highestBottom = $bottom -}}
+    {{- end -}}
+  {{- end -}}
+  
+  {{/* If our natural position would overlap, move below the highest */}}
+  {{- if lt $finalPosition (add $highestBottom $minSeparation) -}}
+    {{- $finalPosition = add $highestBottom $minSeparation -}}
+  {{- end -}}
+{{- end -}}
+
+{{/* Ensure we don't go negative */}}
+{{- if lt $finalPosition 1 -}}
+  {{- $finalPosition = 1 -}}
+{{- end -}}
+
+{{/* Store this sidenote's final position and height by building new slices */}}
+{{- $newPositions := $existingPositions | append $finalPosition -}}
+{{- $newHeights := $existingHeights | append $estimatedHeight -}}
+{{- .Page.Scratch.Set $scratchKey $newPositions -}}
+{{- .Page.Scratch.Set $scratchHeightKey $newHeights -}}
+
+{{/* Calculate offset from original position */}}
+{{- $offset := sub $finalPosition $currentPos -}}
+
+{{/* Baseline alignment adjustment using font-size based calculation */}}
+{{/* Calculate based on typical body line-height (1.5) and font-size difference */}}
+{{- $bodyLineHeight := 1.4 -}}
+{{- $fontSizeRatio := 0.875 -}}{{/* Sidenote font is typically 87.5% of body font */}}
+{{- $baselineAdjustment := mul -1 $bodyLineHeight -}}{{/* Move up by one line-height */}}
+{{- $baselineAdjustment = add $baselineAdjustment (mul $fontSizeRatio 0.2) -}}{{/* Small adjustment for font size difference */}}
+{{- $totalOffset := add $offset $baselineAdjustment -}}
+
+
+{{- if $debugMode -}}
+<!-- Debug: Sidenote {{ $sidenoteNum }} - Position: {{ $currentPos }} -> {{ $finalPosition }}, Offset: {{ $totalOffset }} -->
+<!-- Debug: Estimated height: {{ $estimatedHeight }}, Content length: {{ $contentLength }} -->
+<!-- Debug: Existing positions: {{ $existingPositions }} -->
+<!-- Debug: Existing heights: {{ $existingHeights }} -->
+{{- end -}}
+
+{{/* Generate HTML with superscript numbering */}}
+<span class="sidenote">
+    <label class="sidenote-label" for="sidenote-{{ $.Ordinal }}">
+        {{- if $label -}}{{ $label }}{{- end -}}<sup>{{ $sidenoteNum }}</sup>
+    </label>
+    <input class="sidenote-checkbox" type="checkbox" id="sidenote-{{ $.Ordinal }}"></input>
+    <span class="sidenote-content sidenote-{{ $side }} sidenote-margin-adjust"{{- if ne $totalOffset 0 }} style="--margin-offset: calc({{ $totalOffset }} * var(--body-line-height, 1.4) * 1em);"{{- end }}>
+    <sup>{{ $sidenoteNum }}</sup> {{ $content }}
+    </span>
+</span>

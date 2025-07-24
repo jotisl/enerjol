@@ -1,0 +1,21 @@
+{{ partial "header.html" . }}
+<div class="main-content">
+  <div class="article-meta">
+    <h1 class="title">{{ .Title | markdownify }}</h1>
+    <!-- {{ with .Params.author }}
+      <p class="byline">By {{ . }}</p>
+    {{ end }} -->
+      {{ if or .Params.date .Params.lastmod }}
+      <p class="byline">
+        {{ if .Params.date }}Published: {{ .Date.Format "2006/01/02" }}{{ end }}
+        {{ if and .Params.date .Params.lastmod }} &nbsp;&bull;&nbsp; {{ end }}
+        {{ with .Params.lastmod }}Last updated: {{ .Format "2006/01/02" }}{{ end }}
+      </p>
+    {{ end }}
+  </div>
+  <main>
+  {{ .Page.Scratch.Set "sidenote_position" 0 }}
+  {{ .Content }}
+  </main>
+</div>
+{{ partial "footer.html" . }}

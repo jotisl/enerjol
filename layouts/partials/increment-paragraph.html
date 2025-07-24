@@ -1,0 +1,10 @@
+{{/* Add this to your layouts/_default/single.html before rendering content */}}
+{{ .Page.Scratch.Set "paragraph_counter" 0 }}
+
+{{/* Then render your content normally */}}
+{{ .Content }}
+
+{{/* Or if you want to auto-increment, you can manually track by adding this shortcode */}}
+{{/* layouts/shortcodes/p.html - optional paragraph tracker */}}
+{{- .Page.Scratch.Set "paragraph_counter" (add 1 (.Page.Scratch.Get "paragraph_counter" | default 0)) -}}
+{{ .Inner }}
