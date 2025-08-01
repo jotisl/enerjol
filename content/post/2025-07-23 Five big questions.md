@@ -2,7 +2,7 @@
 title: Five questions on the backburner
 author: JOL
 date: '2025-07-24'
-lastmod: '2025-07-24'
+lastmod: '2025-08-01'
 categories:
   - topics
   - backburner
@@ -14,13 +14,13 @@ tags:
   - energysheds
 ---
 
-When you spend two and a half years trying to crossbreed engineering with policy in energy systems, you necessarily find yourself asking a lot of questions. These are some of the questions that have stuck with me over time, and that a quick google didn't resolve. I'm working on some of them, or on posing them to more people. Collective intelligence!
+When you spend two and a half years trying to crossbreed engineering with policy in energy systems, you necessarily find yourself asking a lot of questions. These are some of the questions that a quick google didn't resolve. I'm working on some of them, or on posing them to more people. Collective intelligence!
 
 1. How can we move from an environmentalism that opposes to one that proposes?
 2. What are the scaling laws of power systems?
 3. How will energy storage be distributed between garages, industrial yards, neighborhoods, substations, and generators?
 4. What will be the temporal and spatial extent of the world's energysheds?
-5. How much matter are we processing to make today's (energy) tech, and at what point are urban deposits better than natural ones?
+5. How much matter are we processing to make today's (energy) tech, and at what point are manmade deposits better than natural ones?
 
 
 ## 1. Towards an environmentalism that proposes
@@ -42,13 +42,13 @@ For another example, consider [how grids fail](https://wiki.santafe.edu/images/e
 Empirical, predictive top-down power laws might be of use as we try to decide what to build. They could help us assess tradeoffs in power system architecture with less compute. When utilities say "can't be done" to deep renewables integration yet the (academic) policy wonks yell on rooftops that it's the cheapest way, clearly there's a need to be met.
 
 ## 3. Energy storage's many forms
-In garages, it's EVs or small wall-mounted battery packs. Maybe even hot water tanks.
+In garages, it'll take the form of EVs or small wall-mounted battery packs. Maybe even hot water tanks.
 
 In industrial yards, it might be fleets of EV buses or vans, or the batteries needed to deal with the surge in power demand those generate when they plug in. 
  
 In neighborhoods, citizens might come together to own a community battery that sits on a concrete pad, curbside. It'll soak up solar from homes and dispatch back below the substation.
 
-In substations, utilities might install one on the low-voltage side to deal with new loads and thus defer transformer upgrades. They might also tack them onto transmission lines to increase uptime. 
+In substations, utilities might install one on the low-voltage side to deal with new loads and thus defer transformer upgrades. They might also tack them onto transmission lines to increase throughput. 
 
 In power plants, storage might be paired with wind or solar so it can deliver power at times of high prices. 
 
@@ -63,16 +63,16 @@ A watershed means the area where water inflows drain to a common body of water. 
 
 Today, the vast majority of energy, in the form of fossil fuels, is produced in relatively few countries. So, today, few places are autarkic in energy terms. We might in fact be a single big energyshed. Tomorrow, the ubiquity of sunshine and wind might mean more places can self-supply. Will they? How much? What's the trade-off? How "porous" will those boundaries be between energysheds? How much do those answers depend on the availability of energy storage technologies, which transform present self-supply into future self-supply?
 
-The answer depends on national security concerns, {{< sidenote "equality concerns," >}}Imagine every northern European coastline being lined with wind turbines, while every southern European field is covered in solar panels, while the middle is criss-crossed by dense transmission lines. Cost-optimal, yes, but uneven distribution of the "burdens", so to speak. {{< /sidenote >}} and practical ones. It might be "best" to build transmission lines to connect continents, but if it takes too long and people want control over their energy supply, separate energysheds might prevail. This kind of question is studied by folks like [Evelina Trutnevyte and Jean-Philipp Sasse](https://doi.org/10.1016/j.apenergy.2019.113724), or [Fabian Neumann and Tom Brown](https://www.sciencedirect.com/science/article/pii/S2589004223007794?via%3Dihub#fig7), using models which allow "near-optimality". Are we willing to pay the prices of energetic insulation? Do people realize they are material? This is, in a way, related to local opposition to broadly beneficial projects in #1.
+The answers depend on national security concerns, {{< sidenote "equality concerns," >}}Imagine every northern European coastline being lined with wind turbines, while every southern European field is covered in solar panels, while the middle is criss-crossed by dense transmission lines. Cost-optimal, yes, but uneven distribution of the "burdens", so to speak. {{< /sidenote >}} and practical ones. It might be "best" to build transmission lines to connect continents, but if it takes too long and people want control over their energy supply, separate energysheds might prevail. These kinds of questions are studied by folks like [Evelina Trutnevyte and Jean-Philipp Sasse](https://doi.org/10.1016/j.apenergy.2019.113724) or [Fabian Neumann and Tom Brown](https://www.sciencedirect.com/science/article/pii/S2589004223007794?via%3Dihub#fig7), using models which allow "near-optimality". Are we willing to pay the prices of energetic insulation? Do people realize they are material, as suggested by [Haozhe Yang et al.](https://doi.org/10.1038/s41467-023-43723-z)? This is, in a way, related to local opposition to broadly beneficial projects in #1.
 
-## 5. Matter streams, tech minerals and urban mines
+## 5. Matter streams, tech minerals and landfill mines
 We need minerals to build the machines that will collect the sun and the wind, and store it for later. We know this. People like to throw up graphics of the mass of oil and gas combustion products compared to the mass of minerals required to build an electric future. Those miss the point of all the ore that gets processed to refine those minerals, as well as all the earth that's moved to extract the oil and the coal and the gas in the first place.
 
-Which is bigger? Does it matter? From a climate change standpoint, [harmonized life cycle assessments](https://www.nrel.gov/analysis/life-cycle-assessment.html) suggest solar and wind are a slam-dunk compared to gas, coal, and diesel. But, as we know, there are other ways to harm the environment: acidification, eutrophication, water and soil contamination, biodiversity loss, and so on. What does the picture look like if we consider those?
+Which is bigger? Does it matter? From a climate change standpoint, [harmonized life cycle assessments](https://www.nrel.gov/analysis/life-cycle-assessment.html) suggest solar and wind are a slam-dunk compared to gas, coal, and diesel. But, as we know, there are other ways to harm the environment: acidification, eutrophication, water pollution, soil contamination, biodiversity loss, and so on. What does the picture look like if we consider those?
 
-The optimist in me believes arguments that recycling and material re-use will reduce the size of this problem from virgin material extraction. Recycling also moves us away from an extractive mineral industry that is mired in human rights violations that occur far away from the electric opulence an economically motivated transition promises. Recycling could mean we repeat this exploitative pattern closer to home--but then it's up to us to not be hypocrites in our own backyard.
+The optimist in me wants to believe arguments that recycling and material re-use will reduce the size of the virgin material extraction problem. Recycling moves us away from an extractive mineral industry mired in human rights violations that occur far away from the electric opulence an economically motivated transition promises. Recycling could mean we repeat this exploitative pattern closer to home--but then it's up to us to do better in our backyard.
 
-Practically, this might even mean digging for minerals in landfills one day. When might that day come? How do landfills compare with virgin ores in terms of (recoverable) mineral grades? What can we do when designing products to make recovery from mixed waste easier? Is there a tradeoff between performance and recyclability that we can optimize for? Does the energy intensity of material production increase with recycling? What happens to the life cycle impact(s) if it does? Again, does it matter when compared to the fossil alternatives we have?
+Practically, this might even mean digging for minerals in landfills one day. When might that day come? How do landfills compare with virgin ores in terms of (recoverable) mineral grades? What can we do when designing products to make recovery from mixed waste easier? Is there a tradeoff between performance and recyclability that we can optimize for? Does the energy intensity of equipment production increase with recycling? What happens to the life cycle impact(s) if it does? Again, does it matter when compared to the fossil alternatives we have?
 
 ## An invitation
 I've outlined five big areas where I feel both uncertain and intrigued. Some are more applied than others. I'm sure the questions have at least partial answers today. If you have an inkling of what they might be, or want to tell me what I've forgotten to consider, shoot me an email at julien.otis-laperriere@mail.mcgill.ca.
