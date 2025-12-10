@@ -39,6 +39,7 @@ caches:
     dir: :cacheDir/images
 
 markup:
+  defaultMarkdownHandler: goldmark
   highlight:
     codeFences: false
   goldmark:

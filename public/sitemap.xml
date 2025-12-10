@@ -3,15 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-08-01T00:00:00+00:00</lastmod>
+    <lastmod>2025-08-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/architectures/</loc>
+    <lastmod>2025-08-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2025-08-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/evs/</loc>
+    <lastmod>2025-08-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/</loc>
+    <lastmod>2025-08-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/storage/</loc>
+    <lastmod>2025-08-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/post/2025/08/15/storage-archetypes-to-simplify-the-battery-size-debate/</loc>
+    <lastmod>2025-08-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-08-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/utility/</loc>
+    <lastmod>2025-08-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/mscthesis/</loc>
     <lastmod>2025-07-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/backburner/</loc>
-    <lastmod>2025-08-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/energysheds/</loc>
@@ -23,19 +44,10 @@
     <loc>http://localhost:1313/tags/minerals/</loc>
     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2025-08-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/proposition/</loc>
     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/scaling/</loc>
-    <lastmod>2025-08-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/storage/</loc>
-    <lastmod>2025-08-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-08-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/topics/</loc>

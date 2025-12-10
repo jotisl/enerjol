@@ -6,8 +6,15 @@
     <description>Recent content in Categories on (Side)notes on energy</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Architectures</title>
+      <link>http://localhost:1313/categories/architectures/</link>
+      <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/architectures/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Backburner</title>
       <link>http://localhost:1313/categories/backburner/</link>

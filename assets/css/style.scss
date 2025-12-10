@@ -236,6 +236,16 @@ img, iframe, video {
   margin: auto;
 }
 
+figure {
+  display:block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  font-size: 0.9em;
+  color:#555;
+  font-style:italic;
+}
+
 blockquote {
   background: #f9f9f9;
   border-left: 5px solid #ccc;
