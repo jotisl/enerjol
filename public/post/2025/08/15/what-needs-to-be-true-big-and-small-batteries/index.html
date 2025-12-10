@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What needs to be true: big and small batteries | (Side)notes on energy</title>
+    <link rel="stylesheet" href="/css/style.min.8240a29e9fcdc98c7a7382c6ec10cd3c0306d4e34ded0ce450a1bac43f534902.css">
+    
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+<body>
+  <div class="page-container">
+    <header class="site-header">
+      <div class="site-title">(Side)notes on energy</div>
+      <nav>
+        <ul class="menu">
+          
+          <li><a href="/">Home</a></li>
+          
+          <li><a href="/mscthesis/">MSc</a></li>
+          
+          <li><a href="/about/">About</a></li>
+          
+        </ul>
+      </nav>
+      <hr/>
+    </header>
+<div class="main-content">
+  <div class="article-meta">
+    <h1 class="title">What needs to be true: big and small batteries</h1>
+    
+      
+      <p class="byline">
+        Published: 2025/08/15
+         &nbsp;&bull;&nbsp; 
+        Last updated: 2025/08/08
+      </p>
+    
+  </div>
+  <main>
+  
+  <p>Electricity storage will span many scales as we electrify end-use and decarbonize supply. Batteries might be on garage walls (PowerWalls and similar), on wheels (EVs), on poles (next to transformers), on pads (by the local school or small business), in parking lots (to plug into the solar panels on your big box store&rsquo;s roof), in substations, or upstream of it all, in a field somewhere near wind or solar farms.</p>
+<p>It&rsquo;s clear &ldquo;all-of-the-above&rdquo; is the answer; the questions are rather &ldquo;how much of each&rdquo; and &ldquo;which should we accelerate via policy?&rdquo;. The way people typically answer this is with cost-benefit modelling, where costs are determined by capacity expansion models and benefits are calculated from reduced emissions, reduced energy expenses, investor returns, etc. This post is not a summary of this type of extensive analysis. Instead, I want to frame the question in terms of what needs to be true for this or that mode of storage to be the &ldquo;winner&rdquo;. It turns out the data is seemingly thin to answer that.</p>
+<h2 id="the-wires-define-storage-activity-archetypes">The wires define storage activity &ldquo;archetypes&rdquo;</h2>
+<p>Saul Griffith has an amazing graphic on how the wires contribute to electricity costs <span class="sidenote-number">
+  <label class="sidenote-label" for="sidenote-1">for households&NoBreak;<b><sup>1</sup></b></label>
+  <input class="sidenote-checkbox" type="checkbox" id="sidenote-1"></input>
+  <small class="sidenote">
+    <b><sup>1</sup></b> Rate structures aren&rsquo;t the same across industrial, commercial, and residential customers. That matters to this discussion.
+  </small>
+</span>in his latest book, <a href="https://www.blackincbooks.com.au/books/plug"><em>Plug in!</em></a>:</p>
+<p>
+  <figure>
+    <img src="https://substackcdn.com/image/fetch/$s_!VjE1!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb3f01835-ac12-4c81-ad98-7b77395cb413_4042x2411.png" alt="Figure 4.3 from Saul Griffith&rsquo;s Plug in! I love the sketches.">
+    <figcaption>This sketch of the system and its costs has made me fascinated with the </figcaption>
+  </figure>
+</p>
+<p>We see that a big driver of electricity costs is its transport by wires from far afield. It&rsquo;s useful, then, to consider types of storage dispatch based on their relationship to the wires (with examples):</p>
+<ul>
+<li>storage to load (your car to your house)</li>
+<li>storage to distribution poles (your neighborhood battery to the poles and wires nearby)</li>
+<li>storage to the bulk system (a big battery in a field feeding the medium-high voltage power lines running to town)</li>
+</ul>
+<p>As well as three types of storage <em>charging</em>:</p>
+<ul>
+<li>supply to storage (panels on your roof to your garage battery)</li>
+<li>distribution to storage (solar soaking into a local battery via the grid)</li>
+<li>bulk system to storage (a big battery in a field absorbing wind from another field)</li>
+</ul>
+<p>The key for costs is that these types are hierarchical. Power dispatched on the bulk transmission system passes through the distribution network and your meter to heat your kettle. Power dispatched from within your distribution feeder can make it to your kettle while remaining below the substation, using only distribution wires and pole-mounted transformers. Power dispatched to your electrical panel has a shorter route to being useful.</p>
+<p>If we look at combinations of charging and discharging, we get the table below. I named and gave exmaples of archetypal use cases. Some exist today, like co-location or bulk firming, while some are instead <em>possible</em>, like supply socialization.</p>
+<p>
+  <figure>
+    <img src="/images/img_batteries/UseCasesTable.png" alt="Archetypal storage use cases based on how they charge and the load they serve">
+    <figcaption>Names and examples are, of course, far from exhaustive, and, in part, speculative.</figcaption>
+  </figure>
+</p>
+<h2 id="what-needs-to-be-true-for-an-archetype-to-be-cheapest-for-a-certain-load">What needs to be true for an archetype to be cheapest for a certain load?</h2>
+<p>That headline question requires some basic capital cost data, as well as assumptions about peak load, load shape, capacity factor curve of supply, and grid tariff structures. We also need to agree on whether we mean cheapest for consumers or cheapest for all stakeholders combined&hellip;</p>
+<p>The load shape, when scaled to the absolute value of the peak load, gives us the total energy consumption. For different types of loads, different supply options are available &ndash; solar makes sense in homes and commercial sites, while wind would only be available to large industrial loads looking to self-produce or the broad grid.</p>
+<p>So far, so good&hellip;if loads were in autarky.</p>
+<h3 id="tariff-structures-make-a-mess">Tariff structures make a mess</h3>
+<p>Problems arise with making assumptions about tariff structures. They vary tremendously. For example, in Quebec, residential consumers pay a <span class="sidenote-number">
+  <label class="sidenote-label" for="sidenote-2">cross-subsidized&NoBreak;<b><sup>2</sup></b></label>
+  <input class="sidenote-checkbox" type="checkbox" id="sidenote-2"></input>
+  <small class="sidenote">
+    <b><sup>2</sup></b> Meaning paid for by other grid customers, namely industrial and commercial ones. This has been a <a href="https://www.cbc.ca/news/canada/montreal/quebec-energy-board-hikes-up-rates-by-3-6-per-cent-1.7477352">recent point of contention</a>.
+  </small>
+</span>, flat rate based on electricity volume. Commercial customers pay a higher volume rate, up to a certain capacity: then they pay for power capacity too. Large industrials pay a lower volume rate, but pay for capacity.</p>
+<p>In Australia, each retailer will have their own tariff structures, and change them like telcos do with phone plans. Some retailers have flat fees and full wholesale market exposure, like Amber; others have daytime volume charges higher than nightime ones; others yet have capacity costs AND volume charges varying with time of day.</p>
+<p>This is even messier when the net load of a house or facility turns negative. Can they export to the grid? If they do, are they getting paid spot prices + network fees, or just spot prices? Are they instead compensated a flat feed-in tariff, or net-metered for their usage of electricity which has a flat cost?</p>
+<p>For instance, a residential EV that is parked 95% of the time in your driveway, when you work from home with solar above your head, will be hard to beat in terms of storage costs. The utility that has to pay for the wires and transformers to deliver you the same stored sunshine will lose.</p>
+<p>Worse still, distribution network costs are famously varied across regions and hard to model, requiring <a href="https://www.nature.com/articles/s41597-019-0347-4">coarse approximations</a>. You&rsquo;d need to know these costs well to see under what conditions the utility would end up being made whole, without ripping off the consumer. And you&rsquo;d still be at risk of your local utility saying &ldquo;well, in my particular case&hellip;&rdquo; without much of an empirical recourse.</p>
+<h2 id="heuristics">Heuristics:</h2>
+
+  </main>
+</div>
+  <footer>
+  
+  
+  <hr/>
+  © Julien Otis-Laperriere - 2025 | <a href="https://www.linkedin.com/in/julien-otis-laperriere/">LinkedIn</a>
+  
+  </footer>
+  </body>
+</html>
