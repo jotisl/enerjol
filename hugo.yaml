@@ -32,7 +32,7 @@ menu:
 
 params:
   description: "A website built starting from Hugo-Xmin"
-  footer: "&copy; Julien Otis-Laperriere - {Year} | [LinkedIn](https://www.linkedin.com/in/julien-otis-laperriere/)"
+  footer: "Julien Otis-Laperriere - {Year} | [LinkedIn](https://www.linkedin.com/in/julien-otis-laperriere/)"
 
 caches:
   images:
