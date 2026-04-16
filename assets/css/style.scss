@@ -9,7 +9,7 @@ $sidenote-shift: $sidenote-width+$sidenote-offset;
 
 // Breakpoint for when sidenotes no longer fit and collapse
 $mobile-breakpoint: $container-width + $sidenote-width + $sidenote-offset;
-$medium-breakpoint: $container-width + 2*$sidenote-width + $sidenote-offset;
+$medium-breakpoint: $container-width + 2*$sidenote-shift;
 //================================================
 // 2. CORE PAGE LAYOUT
 //================================================
@@ -34,8 +34,8 @@ body {
     margin: auto;
   }
 
-  @media screen and (min-width: $mobile-breakpoint) and (max-width:$medium-breakpoint){
-  grid-template-columns: 1fr $container-width $sidenote-width;
+  @media screen and (min-width: $mobile-breakpoint) and (max-width: $medium-breakpoint) {
+    grid-template-columns: 1fr $container-width $sidenote-shift;
   }
   
 }
@@ -58,6 +58,10 @@ footer {
   // padding: 1em;
   position: relative; // Keeps sidenote anchors working correctly
   overflow: visible;
+}
+
+.main-content > *:first-child {
+  margin-top: 0;
 }
 
 //================================================
