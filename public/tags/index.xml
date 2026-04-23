@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on (Side)notes on energy</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://jotisl.github.io/tags/</link>
     <description>Recent content in Tags on (Side)notes on energy</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 08 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jotisl.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>EVs</title>
-      <link>http://localhost:1313/tags/evs/</link>
+      <link>https://jotisl.github.io/tags/evs/</link>
       <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/evs/</guid>
+      <guid>https://jotisl.github.io/tags/evs/</guid>
       <description></description>
     </item>
     <item>
       <title>Storage</title>
-      <link>http://localhost:1313/tags/storage/</link>
+      <link>https://jotisl.github.io/tags/storage/</link>
       <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/storage/</guid>
+      <guid>https://jotisl.github.io/tags/storage/</guid>
       <description></description>
     </item>
     <item>
       <title>Utility</title>
-      <link>http://localhost:1313/tags/utility/</link>
+      <link>https://jotisl.github.io/tags/utility/</link>
       <pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/utility/</guid>
+      <guid>https://jotisl.github.io/tags/utility/</guid>
       <description></description>
     </item>
     <item>
       <title>Energysheds</title>
-      <link>http://localhost:1313/tags/energysheds/</link>
+      <link>https://jotisl.github.io/tags/energysheds/</link>
       <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/energysheds/</guid>
+      <guid>https://jotisl.github.io/tags/energysheds/</guid>
       <description></description>
     </item>
     <item>
       <title>Minerals</title>
-      <link>http://localhost:1313/tags/minerals/</link>
+      <link>https://jotisl.github.io/tags/minerals/</link>
       <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/minerals/</guid>
+      <guid>https://jotisl.github.io/tags/minerals/</guid>
       <description></description>
     </item>
     <item>
       <title>Proposition</title>
-      <link>http://localhost:1313/tags/proposition/</link>
+      <link>https://jotisl.github.io/tags/proposition/</link>
       <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/proposition/</guid>
+      <guid>https://jotisl.github.io/tags/proposition/</guid>
       <description></description>
     </item>
     <item>
       <title>Scaling</title>
-      <link>http://localhost:1313/tags/scaling/</link>
+      <link>https://jotisl.github.io/tags/scaling/</link>
       <pubDate>Thu, 24 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/scaling/</guid>
+      <guid>https://jotisl.github.io/tags/scaling/</guid>
       <description></description>
     </item>
   </channel>
